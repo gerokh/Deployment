@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAPI Beginner Project</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to FastAPI</h1>
+        
+        {% if message %}
+            <div class="message-box">
+                <p>{{ message }}</p>
+                <a href="/" class="button">Go Back</a>
+            </div>
+        {% else %}
+            <form action="/submit" method="post" class="form-box">
+                <label for="name">Enter your name:</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+                <button type="submit" class="button">Submit</button>
+            </form>
+        {% endif %}
+    </div>
+</body>
+</html>
